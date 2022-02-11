@@ -99,7 +99,7 @@ unique(nro_documento);
 -- ======= TABLA INMUEBLES ===========
 
 
-create type estado_inmueble_enum as enum('VENDIDO','DISPONIBLE','NO DISPONIBLE','FALTA INSPECCION');
+create type estado_inmueble_enum as enum('VENDIDO','DISPONIBLE','NO_DISPONIBLE','FALTA_INSPECCION');
 
 
 create table inmuebles(
