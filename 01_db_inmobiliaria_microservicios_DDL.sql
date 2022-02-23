@@ -102,6 +102,10 @@ unique(nro_documento);
 create type estado_inmueble_enum as enum('VENDIDO','DISPONIBLE','NO_DISPONIBLE','FALTA_INSPECCION');
 
 
+-- Casteamos los varchar que vengan desde hibernate a enum
+CREATE CAST (varchar AS estado_inmueble_enum) WITH INOUT AS IMPLICIT;
+
+
 create table inmuebles(
 	
 id int primary key,
