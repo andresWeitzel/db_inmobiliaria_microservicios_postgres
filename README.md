@@ -31,7 +31,7 @@
 <hr>
 
 ## `Documentación y Guía Del Proyecto`
-#### (Esta Documentación y Guía que Desarrollé es para la Creación, Configuración, Manejo, Etc de la Base de Datos `db_inmobiliaria_microservicios` con PostgreSQL en DBeaver. Como así también para el Desarrollo de este Proyecto, Aplicaciones del Código, Programación de Base de Datos con el Lenguaje PL/pgSQL, Manejo de los Posibles Errores que pudiesen surgir, Manejo de Git, Consideraciones y Declaraciones del Proyecto, etc. Recomiendo Leerla y Realizar todo paso a paso como se indica en la misma, cualquier aporte o sugerencia, informar al respecto).
+#### (Esta Documentación y Guía que Desarrollé es para la Creación, Configuración, Manejo, Etc de la Base de Datos `db_inmobiliaria_microservicios` con PostgreSQL en DBeaver. Como así también para el Desarrollo y Aplicaciones del Código, Manejo de los Posibles Errores que pudiesen surgir, Manejo de Git, Consideraciones y Declaraciones del Proyecto, etc. Recomiendo Leerla y Realizar todo paso a paso como se indica en la misma, cualquier aporte o sugerencia, informar al respecto).
 
 ## Indice
 
@@ -74,10 +74,10 @@
     * --> Nuevo
     * --> Database Connection, Siguiente.
     * --> Seleccionar el SGDB PostgreSQL, Siguiente.
+    * --> En el Host dejamos como aparece `localhost`
     * --> En Database dejamos como aparece `postgres`
-    * --> Seguidamente vamos a agregar una contraseña, en password escribimos `postgres`
     * --> El resto lo dejamos todo por defecto ( Host, Port, etc ).
-    * --> Finalizar, asegurarse que se haya creado la db con su configuración
+    * --> Finalizar, asegurarse que se haya creado la conexión a Postgres correctamente
     * --> Ya está la conexión configurada.
 
 
