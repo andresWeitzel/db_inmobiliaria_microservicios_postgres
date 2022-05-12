@@ -27,10 +27,25 @@ select column_name, data_type, is_nullable from
 information_schema.columns where table_name = 'inmuebles';
 
 
-delete from inmuebles where id='0c605f04-17b0-4179-ba44-bf4240d4f791';
+delete from inmuebles where id='32d29b6b-23d8-48ce-9f6d-88372aea3d42';
 
 
 select * from inmuebles;
+
+
+-- -------------------------------------------------
+-- ----------- INSERCIÓN DE  REGISTRO ------------
+-- -------------------------------------------------
+
+
+insert into inmuebles (id_propietario_inmueble, descripcion , tipo, estado_inmueble 
+, precio_inmueble_usd , direccion , ubicacion , sitio_web) values
+('9fef5363-c0f7-4edc-b63a-f13c7f0d67b1' , 'Departamento de 1 Ambiente', 'Departamento','DISPONIBLE', 90.000, 'San Juan 332'
+, 'Parque Patricios', 'www.avisosAlInstante.com.ar');
+
+
+select * from inmuebles;
+select * from propietarios_inmuebles;
 
 
 
@@ -54,7 +69,7 @@ select column_name, data_type, is_nullable from
 information_schema.columns where table_name = 'propietarios_inmuebles';
 
 
-delete from propietarios_inmuebles where id='c34b5f05-9da1-41af-aacc-765ffb4bb4e9';
+delete from propietarios_inmuebles where id='f55fc9f2-4159-4f86-a932-3a9c1d5449bd';
 
 
 select * from propietarios_inmuebles;
@@ -86,16 +101,3 @@ select * from inmuebles;
 select * from propietarios_inmuebles;
 
 
--- -------------------------------------------------
--- ----------- INSERCIÓN DE  REGISTRO ------------
--- -------------------------------------------------
-
-
-insert into inmuebles (id_propietario_inmueble, descripcion , tipo, estado_inmueble 
-, precio_inmueble_usd , direccion , ubicacion , sitio_web) values
-('57258c5b-88eb-4028-a76d-4d3dd674a182' , 'Departamento de 1 Ambiente', 'Departamento','DISPONIBLE', 90.000, 'San Juan 332'
-, 'Parque Patricios', 'www.avisosAlInstante.com.ar');
-
-
-select * from inmuebles;
-select * from propietarios_inmuebles;

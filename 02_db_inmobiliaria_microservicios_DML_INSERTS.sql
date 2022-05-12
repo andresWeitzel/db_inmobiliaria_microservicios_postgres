@@ -86,13 +86,13 @@ information_schema.columns where table_name = 'inmuebles';
 
 insert into inmuebles (id_propietario_inmueble, descripcion , tipo, estado_inmueble 
 , precio_inmueble_usd , direccion , ubicacion , sitio_web) values
-('c2dc943f-c05e-4ad7-8e9c-ca9480477416', 'PH de 4 Ambientes, 3 dormis, 2 baños, Amplio Espacio,jardin y balcon, Sin Expensas, Lujoso'
+('9fef5363-c0f7-4edc-b63a-f13c7f0d67b1', 'PH de 4 Ambientes, 3 dormis, 2 baños, Amplio Espacio,jardin y balcon, Sin Expensas, Lujoso'
 , 'PH/Casa','DISPONIBLE', 177.000, 'San Cristobla 456', 'Palermo', 'www.avisosAlInstante.com.ar'),
-('b942e149-45c0-480e-bc9e-20589697ef00', 'Casa 3 Ambientes, 4 Dormitorios, 1 baño y Cochera', 'Casa','VENDIDO', 168.000
+('8f64c89e-0d23-4328-9303-da63ddbfc28e', 'Casa 3 Ambientes, 4 Dormitorios, 1 baño y Cochera', 'Casa','VENDIDO', 168.000
 , 'Aristobulo del Valle 608 ', 'Belgrano', 'www.avisosAlInstante.com.ar'),
-('ed8e7e37-de5e-4f30-aaa6-13712e8f4233' , 'Departamento de 2 Ambientes', 'Departamento','VENDIDO', 110.000, 'Av. Corrientes 112'
+('4f7c0507-b9f6-4c3e-8394-ce95eb188f2c' , 'Departamento de 2 Ambientes', 'Departamento','VENDIDO', 110.000, 'Av. Corrientes 112'
 , 'Caballito', 'www.avisosAlInstante.com.ar'),
-('c34b5f05-9da1-41af-aacc-765ffb4bb4e9' , 'Departamento de 1 Ambiente', 'Departamento','DISPONIBLE', 90.000, 'San Juan 332'
+('f55fc9f2-4159-4f86-a932-3a9c1d5449bd' , 'Departamento de 1 Ambiente', 'Departamento','DISPONIBLE', 90.000, 'San Juan 332'
 , 'Parque Patricios', 'www.avisosAlInstante.com.ar');
 
 

@@ -34,7 +34,7 @@ update propietarios_inmuebles set direccion = initcap(direccion);
 update propietarios_inmuebles set direccion = replace (direccion, '.', '');
 
 -- Actualizamos una direccion
-update propietarios_inmuebles set direccion='Av Callao 887' where (nombre = 'Guillermo' and apellido = 'Zulenski');
+update propietarios_inmuebles set direccion='Av Callao 882' where (nombre = 'Guillermo' and apellido = 'Zulenski');
 
 select * from propietarios_inmuebles;
 
@@ -77,7 +77,7 @@ update inmuebles set precio_inmueble_usd = precio_inmueble_usd  + 100;
 
 
 -- Actualizamos una direccion segun el propietario del inmueble
-update inmuebles set direccion = 'San Cristobal 578' 
+update inmuebles set direccion = 'San Cristobal 5799' 
 from  propietarios_inmuebles -- sustituimos el join (postgres)
 where ( 
 (propietarios_inmuebles.id = inmuebles.id_propietario_inmueble)  -- comprobacion de id

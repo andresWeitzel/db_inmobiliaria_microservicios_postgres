@@ -34,16 +34,16 @@ drop type if exists estado_inmueble_enum cascade;
 create table propietarios_inmuebles(
 
 id uuid default uuid_generate_v4() primary key,
-nombre varchar(40) not null,
-apellido varchar(40) not null,
+nombre varchar(100) not null,
+apellido varchar(100) not null,
 edad int not null,
 fecha_nacimiento date not null,
-tipo_documento varchar(20) not null,
-nro_documento varchar(20) not null,
-direccion varchar(40) not null, 
+tipo_documento varchar(30) not null,
+nro_documento varchar(50) not null,
+direccion varchar(100) not null, 
 nro_telefono_principal varchar(40) not null,
 nro_telefono_secundario varchar(40),
-email varchar(40)
+email varchar(100)
 
 );
 
@@ -111,9 +111,9 @@ descripcion varchar(200) not null,-- ej: semipiso de 3 Amb en Palermo
 tipo varchar(20) not null, -- depto, casa, etc
 estado_inmueble estado_inmueble_enum not null,
 precio_inmueble_usd decimal(10,2) not null,
-direccion varchar(60) not null,-- San sarasa 123
-ubicacion varchar(60) not null, -- zona:palermo, recoleta, etc
-sitio_web varchar(60)-- link de la pag de la descripcion
+direccion varchar(100) not null,-- San sarasa 123
+ubicacion varchar(100) not null, -- zona:palermo, recoleta, etc
+sitio_web varchar(100)-- link de la pag de la descripcion
 
 );
 
