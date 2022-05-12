@@ -15,13 +15,6 @@ delete from propietarios_inmuebles cascade;
 
 
 
--- Alteramos la secuencia auto incrementable id 
-alter sequence id_sec_prop_inm restart with 1;
-alter sequence id_sec_inm restart with 1;
-
-
-
-
 -- ---------------------------------------------------------------------------
 -- ---------------------------------------------------------------------------
 
@@ -93,13 +86,13 @@ information_schema.columns where table_name = 'inmuebles';
 
 insert into inmuebles (id_propietario_inmueble, descripcion , tipo, estado_inmueble 
 , precio_inmueble_usd , direccion , ubicacion , sitio_web) values
-(1, 'PH de 4 Ambientes, 3 dormis, 2 baños, Amplio Espacio,jardin y balcon, Sin Expensas, Lujoso'
+('c2dc943f-c05e-4ad7-8e9c-ca9480477416', 'PH de 4 Ambientes, 3 dormis, 2 baños, Amplio Espacio,jardin y balcon, Sin Expensas, Lujoso'
 , 'PH/Casa','DISPONIBLE', 177.000, 'San Cristobla 456', 'Palermo', 'www.avisosAlInstante.com.ar'),
-(2, 'Casa 3 Ambientes, 4 Dormitorios, 1 baño y Cochera', 'Casa','VENDIDO', 168.000
+('b942e149-45c0-480e-bc9e-20589697ef00', 'Casa 3 Ambientes, 4 Dormitorios, 1 baño y Cochera', 'Casa','VENDIDO', 168.000
 , 'Aristobulo del Valle 608 ', 'Belgrano', 'www.avisosAlInstante.com.ar'),
-(3 , 'Departamento de 2 Ambientes', 'Departamento','VENDIDO', 110.000, 'Av. Corrientes 112'
+('ed8e7e37-de5e-4f30-aaa6-13712e8f4233' , 'Departamento de 2 Ambientes', 'Departamento','VENDIDO', 110.000, 'Av. Corrientes 112'
 , 'Caballito', 'www.avisosAlInstante.com.ar'),
-(4 , 'Departamento de 1 Ambiente', 'Departamento','DISPONIBLE', 90.000, 'San Juan 332'
+('c34b5f05-9da1-41af-aacc-765ffb4bb4e9' , 'Departamento de 1 Ambiente', 'Departamento','DISPONIBLE', 90.000, 'San Juan 332'
 , 'Parque Patricios', 'www.avisosAlInstante.com.ar');
 
 

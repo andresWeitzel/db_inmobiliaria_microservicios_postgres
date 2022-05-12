@@ -13,12 +13,9 @@ drop table if exists propietarios_inmuebles cascade;
 drop table if exists inmuebles cascade;
 
 
--- Todos lo id PK auto_increment
-
-drop sequence if exists id_sec_prop_inm cascade;
-drop sequence if exists id_sec_inm cascade;
-
-
+-- UUID VALUES
+drop extension if exists "uuid-ossp";
+create extension if not exists "uuid-ossp";
 
 
 -- Enumerados tabla inmuebles
@@ -36,7 +33,7 @@ drop type if exists estado_inmueble_enum cascade;
 
 create table propietarios_inmuebles(
 
-id int primary key,
+id uuid default uuid_generate_v4() primary key,
 nombre varchar(40) not null,
 apellido varchar(40) not null,
 edad int not null,
@@ -108,8 +105,8 @@ CREATE CAST (varchar AS estado_inmueble_enum) WITH INOUT AS IMPLICIT;
 
 create table inmuebles(
 	
-id int primary key,
-id_propietario_inmueble int not null,
+id uuid default uuid_generate_v4() primary key,
+id_propietario_inmueble uuid  not null,
 descripcion varchar(200) not null,-- ej: semipiso de 3 Amb en Palermo
 tipo varchar(20) not null, -- depto, casa, etc
 estado_inmueble estado_inmueble_enum not null,
@@ -147,15 +144,3 @@ check (precio_inmueble_usd > 0);
 -- ---------------------------------------------------------------------------
 -- ---------------------------------------------------------------------------
 
-
-
-
--- ======== TODOS LOS ID´S PK DE LAS TABLAS COMO AUTO_INCREMENT =======
-
-CREATE SEQUENCE id_sec_inm;
-CREATE SEQUENCE id_sec_prop_inm;
-
-
-
-alter table inmuebles alter id set default nextval('id_sec_inm');
-alter table propietarios_inmuebles alter id set default nextval('id_sec_prop_inm');
