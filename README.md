@@ -1,10 +1,40 @@
 # Base de Datos db_inmobiliaria_microservicios
 
-* Base de Datos para el Consumo de los Microservicio InmueblesService y PropietariosInmueblesService
+* Base de Datos para el Consumo de los Microservicio InmuebleService y PropietarioInmuebleService
+* Repositorio MicroServices : https://github.com/andresWeitzel/Microservicios_Spring_Cloud_Netflix_Spring_Boot
+
+</br>
+
+#### Diagrama Entidad Relación  `db_inmobiliaria_microservicio`
+
+![Index app](https://github.com/andresWeitzel/db_inmobiliaria_microservicios_postgres/blob/master/documentation/db_inmobiliaria_microervicios_DER.png)
 
 
 </br>
 
+* DBeaver implementa la Notación IDEF1X para el Diagrama Entidad Relación. En la documentación que anexa DBeaver(https://dbeaver.com/docs/wiki/ER-Diagrams/) no está del todo claro la relación que implementa. Investigando sobre las mismas, se puede concluir que la Relación Diamante y Círculo entre línea Punteada se declara como relaciónes Opcionales.
+
+![Index app](https://github.com/andresWeitzel/Administracion_Gestion_BasesDeDatos_PostgreSQL/blob/master/documentacion/relacionDeTablas.png)
+
+</br>
+
+### Vista de Registros como Ejemplificación
+#### Listado de inmuebles de la Tabla  `inmuebles` aplicando UUID
+
+![Index app](https://github.com/andresWeitzel/db_inmobiliaria_microservicios_postgres/blob/master/documentation/listado_inmuebles.png)
+
+
+#### Listado de propietarios de la Tabla  `propietarios_inmuebles` aplicando UUID 
+
+![Index app](https://github.com/andresWeitzel/db_inmobiliaria_microservicios_postgres/blob/master/documentation/listado_propietarios_inmuebles.png)
+
+
+
+<hr>
+
+## Más Información
+
+</br>
 
 | **Tecnologías Empleadas** | **Versión** | **Finalidad** |               
 | ------------- | ------------- | ------------- |
