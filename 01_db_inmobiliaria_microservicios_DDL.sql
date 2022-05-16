@@ -18,10 +18,6 @@ drop extension if exists "uuid-ossp";
 create extension if not exists "uuid-ossp";
 
 
--- Enumerados tabla inmuebles
-drop type if exists estado_inmueble_enum cascade;
-
-
 
 
 -- ---------------------------------------------------------------------------
@@ -96,20 +92,13 @@ unique(nro_documento);
 -- ======= TABLA INMUEBLES ===========
 
 
-create type estado_inmueble_enum as enum('VENDIDO','DISPONIBLE','NO_DISPONIBLE','FALTA_INSPECCION');
-
-
--- Casteamos los varchar que vengan desde hibernate a enum
-CREATE CAST (varchar AS estado_inmueble_enum) WITH INOUT AS IMPLICIT;
-
-
 create table inmuebles(
 	
 id uuid default uuid_generate_v4() primary key,
 id_propietario_inmueble uuid  not null,
 descripcion varchar(200) not null,-- ej: semipiso de 3 Amb en Palermo
 tipo varchar(20) not null, -- depto, casa, etc
-estado_inmueble estado_inmueble_enum not null,
+estado_inmueble varchar(20) not null, -- enum('VENDIDO','DISPONIBLE','NO_DISPONIBLE','FALTA_INSPECCION');
 precio_inmueble_usd decimal(10,2) not null,
 direccion varchar(100) not null,-- San sarasa 123
 ubicacion varchar(100) not null, -- zona:palermo, recoleta, etc
@@ -129,7 +118,8 @@ unique(id);
 alter table inmuebles 
 add constraint FK_inmuebles_id_propietario_inmueble
 foreign key(id_propietario_inmueble)
-references propietarios_inmuebles(id);
+references propietarios_inmuebles(id)
+ON DELETE CASCADE;
 
 
 
